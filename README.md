@@ -53,23 +53,53 @@ The `Modules` not necessary needs all the components. Maybe the `View` does not 
 
 ## View
 
-One important thing about the `View` is that it needs to be passive and never ask for something like `presenter.tracks()`.
+One important thing about the `View` is that it needs to be **passive** and **NEVER** ask for something like `presenter.tracks()`.
 The communication should always be passive, using the `Presenter` as an event handler. Some *Clean Architectures* have a `"Presenter"` with the name of `EventHandler`. We decided to keep `Presenter` to simplify and be easier to understand and avoid over-engineering by having both.
 
-[View Code]
+```swift
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter.viewDidLoad()
+    }
+```
+
+```swift
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            presenter.didSwipeToDelete(at: indexPath.row)
+        }
+    }
+```
 
 ## Presenter
 
 The `Presenter` is the centralized part of the VIPER architecture. It will receive the UI events and redirect it to `Interactor` or `Router` and implement the `Interactor` delegate converting `Models` to `ViewModel` presenting the data to the `View`.
 Most of the `Presenter` public methods are `View` events, with that said testing the `Presenter` is almost like a UI test and so much faster and less prone to flakiness than `XCUI`.
 
-[Presenter Code]
+```swift
+    func viewDidLoad() {
+        interactor.fetchTracks()
+    }
+```
+
+```swift
+    func fetched(tracks: [Track]) {
+        self.tracks = tracks
+        view?.update(with: tracks.map(toViewModel))
+    }
+```
 
 ## Interactor
 
 `Interactor` will have most of the business logic and handle the retrieving data from `Services`. The `Interactor` is usually initialized with a `Service` `Protocol` to do request and handle data. 
 
-[Interactor Code]
+```swift
+    func fetchTracks() {
+        service.fetch { [weak self] tracks in
+            self?.delegate?.fetched(tracks: tracks)
+        }
+    }
+```
 
 ## Router
 
@@ -83,11 +113,52 @@ The `Contract` is a file which will have the `Protocols` which each part will co
 The exciting part of the `Contract` is that you have all the `Protocols` here, having a big picture of how it behaves. 
 It is the first file to code, defining what the components will implement and how the will be related. 
 
-[Contract Code]
+```swift
+protocol TracksPresenting: class {
+    weak var view: TracksViewing? { get set }
+    func viewDidLoad()
+    func didTapAdd(title: String, artist: String)
+    func didSwipeToDelete(at row: Int)
+}
+
+protocol TracksViewing: class {
+    func update(with viewModels: [TrackViewModel])
+}
+
+protocol TracksInteracting: class {
+    weak var delegate: TracksInteractorDelegate? { get set }
+    
+    func fetchTracks()
+    func addTrack(title: String, artist: String)
+    func delete(track: Track)
+}
+
+protocol TracksInteractorDelegate: class {
+    func fetched(tracks: [Track])
+}
+
+protocol TracksRouting: class {
+    weak var viewController: UIViewController? { get set }
+}
+```
 
 ## Builder
 
 Creates the `Module` injecting the dependencies and returns the `View`.
 It usually has only one method to assemble the entire `Module`.
 
-[Builder Code]
+```swift
+    static func makeModule(service: TrackServicing = TrackService()) -> UIViewController {
+        
+        let router = TracksRouter()
+        let interactor = TracksInteractor(service: service)
+        let presenter = TracksPresenter(interactor: interactor, router: router)
+        let viewController = TracksViewController(presenter: presenter)
+        
+        router.viewController = viewController
+        presenter.view = viewController
+        interactor.delegate = presenter
+        
+        return viewController
+    }
+```
