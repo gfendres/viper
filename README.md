@@ -4,6 +4,8 @@ It does not matter what name you are going to use, VIPER, RIBs, Clean Swift. The
 
 VIPER is followed by: 
 
+![module](https://github.com/gfendres/viper/blob/master/images/module.jpeg)
+
 ## V: View
 
 - Dumb and passive.
