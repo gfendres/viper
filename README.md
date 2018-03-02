@@ -45,6 +45,8 @@ VIPER is followed by:
 
 ----
 
+# Module
+
 All the files and structure is called a `Module` which will be one per `screen/ ViewController / View`. We never use the same component (`Interactor`, `Presenter` ...) in a different `Module`.
 
 If there is something that needs to be shared between `Modules`, it should be in a `Protocol` extension or `Class`, such as `Services`.
