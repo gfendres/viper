@@ -45,6 +45,15 @@ VIPER is followed by:
 
 - Create the Module
 
+## View Model
+
+- `Struct`
+- Data formatted 
+    - `String`
+    - `UIImage`
+    - `Url` 
+- For instance if you have a `cell` with title which has a `name` and `lastName` combined, The `ViewModel` should have a `title: String = name + lastName`.
+
 ----
 
 # Module
@@ -90,6 +99,16 @@ Most of the `Presenter` public methods are `View` events, with that said testing
     func fetched(tracks: [Track]) {
         self.tracks = tracks
         view?.update(with: tracks.map(toViewModel))
+    }
+```
+
+You can choose to have a initializer on `ViewModel` that receives a `model` or do it on the `presenter`.
+
+```swift
+    private func toViewModel(track: Track) -> TrackViewModel {
+        return TrackViewModel(
+            title: "\(track.title) - \(track.artist)",
+            color: color(for: track))
     }
 ```
 
