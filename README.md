@@ -40,6 +40,8 @@ VIPER is followed by:
 ## C: Contract
 
 - Protocols
+- Define the communication between the `VIPER` parts (`Interactor`, `Presenter` ...)
+- It is the **FIRST** file to code.
 
 ## B: Builder
 
@@ -134,7 +136,9 @@ The `Router` is responsible for redirecting to new `Modules` using their `Builde
 
 The `Contract` is a file which will have the `Protocols` which each part will communicate with each other. All the communication is based on `Protocols`, following the `Protocol Oriented Programming`. 
 The exciting part of the `Contract` is that you have all the `Protocols` here, having a big picture of how it behaves. 
-It is the first file to code, defining what the components will implement and how the will be related. 
+
+**It is the first file to code, defining what the components will implement and how the will be related.**
+*Following the Protocol Oriented Proggramming which says that you first have to think about the `Protocols` and later the `classes`*
 
 ```swift
 protocol TracksPresenting: class {
