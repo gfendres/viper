@@ -138,6 +138,7 @@ The `Contract` is a file which will have the `Protocols` which each part will co
 The exciting part of the `Contract` is that you have all the `Protocols` here, having a big picture of how it behaves. 
 
 **It is the first file to code, defining what the components will implement and how the will be related.**
+
 *Following the Protocol Oriented Proggramming which says that you first have to think about the `Protocols` and later the `classes`*
 
 ```swift
