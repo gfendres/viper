@@ -1,3 +1,6 @@
 .DS_Store
 .idea
 /SampleViper/SampleViper.xcodeproj/project.xcworkspace/xcuserdata/guilhermeendres.xcuserdatad/xcschemes
+/SampleViper/SampleViper.xcodeproj/xcuserdata/guilhermeendres.xcuserdatad/xcschemes/xcschememanagement.plist
+/SampleViper/SampleViper.xcodeproj/xcuserdata/guilhermeendres.xcuserdatad/xcschemes/TracksPresenterTests.xcscheme
+/SampleViper/SampleViper.xcodeproj/xcuserdata/guilhermeendres.xcuserdatad/xcschemes/TracksPresenterTests.test_fetchedTracks_shouldUpdateViewModels.xcscheme
