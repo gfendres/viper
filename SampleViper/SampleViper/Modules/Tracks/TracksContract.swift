@@ -2,6 +2,7 @@ import UIKit
 
 protocol TracksPresenting: class {
     weak var view: TracksViewing? { get set }
+    
     func viewDidLoad()
     func didTapAdd(title: String, artist: String)
     func didSwipeToDelete(at row: Int)

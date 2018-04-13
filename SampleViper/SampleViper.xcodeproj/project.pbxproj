@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		24FC30AD42F920C14391B0A4 /* AddAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC343A4636E07E23AD8F62 /* AddAlertViewController.swift */; };
+		24FC36EBD65BAAFACCE184F4 /* MockTracksContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC3816FA2D93E99570AC07 /* MockTracksContract.swift */; };
+		24FC392A7D9E959BAE659438 /* TracksPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC3734B4C38DA9F2369359 /* TracksPresenterTests.swift */; };
 		D1F88BC52036E11E0040D1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BC42036E11E0040D1D9 /* AppDelegate.swift */; };
 		D1F88BCC2036E11E0040D1D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1F88BCB2036E11E0040D1D9 /* Assets.xcassets */; };
 		D1F88BCF2036E11E0040D1D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1F88BCD2036E11E0040D1D9 /* LaunchScreen.storyboard */; };
-		D1F88BDA2036E11E0040D1D9 /* SampleViperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BD92036E11E0040D1D9 /* SampleViperTests.swift */; };
 		D1F88BEF2036E2610040D1D9 /* TracksBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BE92036E2610040D1D9 /* TracksBuilder.swift */; };
 		D1F88BF02036E2610040D1D9 /* TracksContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BEA2036E2610040D1D9 /* TracksContract.swift */; };
 		D1F88BF12036E2610040D1D9 /* TracksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BEB2036E2610040D1D9 /* TracksInteractor.swift */; };
@@ -40,13 +41,14 @@
 
 /* Begin PBXFileReference section */
 		24FC343A4636E07E23AD8F62 /* AddAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAlertViewController.swift; sourceTree = "<group>"; };
+		24FC3734B4C38DA9F2369359 /* TracksPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksPresenterTests.swift; sourceTree = "<group>"; };
+		24FC3816FA2D93E99570AC07 /* MockTracksContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTracksContract.swift; sourceTree = "<group>"; };
 		D1F88BC12036E11E0040D1D9 /* SampleViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F88BC42036E11E0040D1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1F88BCB2036E11E0040D1D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1F88BCE2036E11E0040D1D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1F88BD02036E11E0040D1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1F88BD52036E11E0040D1D9 /* SampleViperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleViperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1F88BD92036E11E0040D1D9 /* SampleViperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViperTests.swift; sourceTree = "<group>"; };
 		D1F88BDB2036E11E0040D1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1F88BE92036E2610040D1D9 /* TracksBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksBuilder.swift; sourceTree = "<group>"; };
 		D1F88BEA2036E2610040D1D9 /* TracksContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksContract.swift; sourceTree = "<group>"; };
@@ -82,6 +84,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24FC387AC4C2AB9913B23B1A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				24FC3C36938A24E8134A399A /* Tracks */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		24FC3C13C7C08950680DB04C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				24FC3816FA2D93E99570AC07 /* MockTracksContract.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		24FC3C36938A24E8134A399A /* Tracks */ = {
+			isa = PBXGroup;
+			children = (
+				24FC3734B4C38DA9F2369359 /* TracksPresenterTests.swift */,
+			);
+			path = Tracks;
+			sourceTree = "<group>";
+		};
 		D1F88BB82036E11D0040D1D9 = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +139,9 @@
 		D1F88BD82036E11E0040D1D9 /* SampleViperTests */ = {
 			isa = PBXGroup;
 			children = (
-				D1F88BD92036E11E0040D1D9 /* SampleViperTests.swift */,
 				D1F88BDB2036E11E0040D1D9 /* Info.plist */,
+				24FC387AC4C2AB9913B23B1A /* Modules */,
+				24FC3C13C7C08950680DB04C /* Mocks */,
 			);
 			path = SampleViperTests;
 			sourceTree = "<group>";
@@ -123,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				D1F88BF82036E2AA0040D1D9 /* Root */,
-				D1F88BE82036E1CB0040D1D9 /* List */,
+				D1F88BE82036E1CB0040D1D9 /* Tracks */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -156,7 +183,7 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		D1F88BE82036E1CB0040D1D9 /* List */ = {
+		D1F88BE82036E1CB0040D1D9 /* Tracks */ = {
 			isa = PBXGroup;
 			children = (
 				D1F88C052036EC010040D1D9 /* ViewModels */,
@@ -168,7 +195,7 @@
 				D1F88BED2036E2610040D1D9 /* TracksRouter.swift */,
 				D1F88BEE2036E2610040D1D9 /* TracksViewController.swift */,
 			);
-			path = List;
+			path = Tracks;
 			sourceTree = "<group>";
 		};
 		D1F88BF52036E26A0040D1D9 /* View */ = {
@@ -340,7 +367,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1F88BDA2036E11E0040D1D9 /* SampleViperTests.swift in Sources */,
+				24FC392A7D9E959BAE659438 /* TracksPresenterTests.swift in Sources */,
+				24FC36EBD65BAAFACCE184F4 /* MockTracksContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
