@@ -8,7 +8,7 @@ protocol TracksPresenting: class {
 }
 
 protocol TracksViewing: class {
-    func update(with viewModels: [TrackViewModel])
+    func update(viewModels: [TrackViewModel])
 }
 
 protocol TracksInteracting: class {

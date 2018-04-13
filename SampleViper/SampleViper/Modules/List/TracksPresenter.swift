@@ -50,6 +50,6 @@ class TracksPresenter: TracksPresenting {
 extension TracksPresenter: TracksInteractorDelegate {
     func fetched(tracks: [Track]) {
         self.tracks = tracks
-        view?.update(with: tracks.map(toViewModel))
+        view?.update(viewModels: tracks.map(toViewModel))
     }
 }

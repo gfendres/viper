@@ -48,44 +48,17 @@ class TracksViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction private func didTapAddButton() {
-        let alert = UIAlertController(title: "Add Track", message: nil, preferredStyle: .alert)
-        
-        let titlePlaceholder = "Title"
-        let artistPlaceholder = "Artist"
-        
-        let addTitleAction = UIAlertAction(title: "Add", style: .default) { [weak self] action in
-            guard
-                let titleTextField = alert.textFields?.first(where: { textField -> Bool in
-                    return textField.placeholder == titlePlaceholder
-                }),
-                let artistTextField = alert.textFields?.first(where: { (textField) -> Bool in
-                    return textField.placeholder == artistPlaceholder
-                }),
-                let title = titleTextField.text,
-                let artist = artistTextField.text else { return }
-            
+        let alertViewController = AlertFactory.makeAddAlertViewController { [weak self] title, artist in
             self?.presenter.didTapAdd(title: title, artist: artist)
         }
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        alert.addTextField { titleTextField in
-            titleTextField.placeholder = titlePlaceholder
-        }
-        
-        alert.addTextField { artistTextField in
-            artistTextField.placeholder = artistPlaceholder
-        }
-        
-        alert.addAction(addTitleAction)
-        alert.addAction(cancel)
-        
-        present(alert, animated: true, completion: nil)
+
+        present(alertViewController, animated: true, completion: nil)
     }
     
 }
 
 extension TracksViewController: TracksViewing {
-    func update(with viewModels: [TrackViewModel]) {
+    func update(viewModels: [TrackViewModel]) {
         trackViewModels = viewModels
         tracksTableView.reloadData()
     }
