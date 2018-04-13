@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24FC30219FD6CABFDA933F25 /* ColorResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC3A68DBBF49741AF95AB0 /* ColorResolver.swift */; };
-		24FC30AD42F920C14391B0A4 /* AddAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC343A4636E07E23AD8F62 /* AddAlertViewController.swift */; };
+		24FC30AD42F920C14391B0A4 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC343A4636E07E23AD8F62 /* AlertFactory.swift */; };
 		24FC313E2DA4178006146990 /* XCTest+Asserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC3B6D72189A9F9962C3B6 /* XCTest+Asserts.swift */; };
 		24FC36EBD65BAAFACCE184F4 /* MockTracksContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC3816FA2D93E99570AC07 /* MockTracksContract.swift */; };
 		24FC392A7D9E959BAE659438 /* TracksPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC3734B4C38DA9F2369359 /* TracksPresenterTests.swift */; };
@@ -45,7 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24FC343A4636E07E23AD8F62 /* AddAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAlertViewController.swift; sourceTree = "<group>"; };
+		24FC343A4636E07E23AD8F62 /* AlertFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
 		24FC362D056483AD8500D55B /* MockTrackColoring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTrackColoring.swift; sourceTree = "<group>"; };
 		24FC3734B4C38DA9F2369359 /* TracksPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksPresenterTests.swift; sourceTree = "<group>"; };
 		24FC3816FA2D93E99570AC07 /* MockTracksContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTracksContract.swift; sourceTree = "<group>"; };
@@ -224,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				D1F88BF62036E2790040D1D9 /* TracksViewController.xib */,
-				24FC343A4636E07E23AD8F62 /* AddAlertViewController.swift */,
+				24FC343A4636E07E23AD8F62 /* AlertFactory.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -382,7 +382,7 @@
 				D1F88BF42036E2610040D1D9 /* TracksViewController.swift in Sources */,
 				D1F88BFF2036E2C00040D1D9 /* RootBuilder.swift in Sources */,
 				D1F88C0D203722AA0040D1D9 /* TrackService.swift in Sources */,
-				24FC30AD42F920C14391B0A4 /* AddAlertViewController.swift in Sources */,
+				24FC30AD42F920C14391B0A4 /* AlertFactory.swift in Sources */,
 				24FC30219FD6CABFDA933F25 /* ColorResolver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

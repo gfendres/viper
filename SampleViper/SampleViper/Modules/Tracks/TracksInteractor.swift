@@ -20,14 +20,10 @@ class TracksInteractor: TracksInteracting {
     }
     
     func addTrack(title: String, artist: String) {
-        service.addTrack(title: title, artist: artist) { [weak self] in
-            self?.fetchTracks()
-        }
+        service.addTrack(title: title, artist: artist, completion: fetchTracks)
     }
     
     func delete(track: Track) {
-        service.delete(track: track) { [weak self] in
-            self?.fetchTracks()
-        }
+        service.delete(track: track, completion: fetchTracks)
     }
 }
