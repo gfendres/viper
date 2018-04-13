@@ -8,12 +8,19 @@ class TracksPresenter: TracksPresenting {
     private let router: TracksRouting
     private let interactor: TracksInteracting
     private var tracks: [Track] = []
-    
+    private var trackColoring: TrackColoring
+
     // MARK: - Init
-    
-    init(interactor: TracksInteracting, router: TracksRouting) {
+
+
+    init(
+        interactor: TracksInteracting,
+        router: TracksRouting,
+        trackColoring: TrackColoring = ColorResolver()
+    ) {
         self.interactor = interactor
         self.router = router
+        self.trackColoring = trackColoring
     }
     
     // MARK: - Public
@@ -36,15 +43,9 @@ class TracksPresenter: TracksPresenting {
     private func toViewModel(track: Track) -> TrackViewModel {
         return TrackViewModel(
             title: "\(track.title) - \(track.artist)",
-            color: color(for: track))
+            color: trackColoring.color(for: track))
     }
-    
-    private func color(for track: Track) -> UIColor {
-        return UIColor(
-            red: CGFloat(Double(track.id) / 10.0),
-            green: CGFloat(Double(track.title.count) / 20.0),
-            blue: CGFloat(Double(track.artist.count) / 20.0), alpha: 1)
-    }
+
 }
 
 extension TracksPresenter: TracksInteractorDelegate {

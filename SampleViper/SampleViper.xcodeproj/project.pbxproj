@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24FC30219FD6CABFDA933F25 /* ColorResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC3A68DBBF49741AF95AB0 /* ColorResolver.swift */; };
 		24FC30AD42F920C14391B0A4 /* AddAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC343A4636E07E23AD8F62 /* AddAlertViewController.swift */; };
 		24FC36EBD65BAAFACCE184F4 /* MockTracksContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC3816FA2D93E99570AC07 /* MockTracksContract.swift */; };
 		24FC392A7D9E959BAE659438 /* TracksPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC3734B4C38DA9F2369359 /* TracksPresenterTests.swift */; };
+		24FC3EB27206D4FC15E151BB /* MockTrackColoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC362D056483AD8500D55B /* MockTrackColoring.swift */; };
 		D1F88BC52036E11E0040D1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BC42036E11E0040D1D9 /* AppDelegate.swift */; };
 		D1F88BCC2036E11E0040D1D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1F88BCB2036E11E0040D1D9 /* Assets.xcassets */; };
 		D1F88BCF2036E11E0040D1D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1F88BCD2036E11E0040D1D9 /* LaunchScreen.storyboard */; };
@@ -41,8 +43,10 @@
 
 /* Begin PBXFileReference section */
 		24FC343A4636E07E23AD8F62 /* AddAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAlertViewController.swift; sourceTree = "<group>"; };
+		24FC362D056483AD8500D55B /* MockTrackColoring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTrackColoring.swift; sourceTree = "<group>"; };
 		24FC3734B4C38DA9F2369359 /* TracksPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksPresenterTests.swift; sourceTree = "<group>"; };
 		24FC3816FA2D93E99570AC07 /* MockTracksContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTracksContract.swift; sourceTree = "<group>"; };
+		24FC3A68DBBF49741AF95AB0 /* ColorResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorResolver.swift; sourceTree = "<group>"; };
 		D1F88BC12036E11E0040D1D9 /* SampleViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F88BC42036E11E0040D1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1F88BCB2036E11E0040D1D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				24FC3816FA2D93E99570AC07 /* MockTracksContract.swift */,
+				24FC362D056483AD8500D55B /* MockTrackColoring.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				D1F88C09203721230040D1D9 /* Track.swift */,
+				24FC3A68DBBF49741AF95AB0 /* ColorResolver.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -360,6 +366,7 @@
 				D1F88BFF2036E2C00040D1D9 /* RootBuilder.swift in Sources */,
 				D1F88C0D203722AA0040D1D9 /* TrackService.swift in Sources */,
 				24FC30AD42F920C14391B0A4 /* AddAlertViewController.swift in Sources */,
+				24FC30219FD6CABFDA933F25 /* ColorResolver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +376,7 @@
 			files = (
 				24FC392A7D9E959BAE659438 /* TracksPresenterTests.swift in Sources */,
 				24FC36EBD65BAAFACCE184F4 /* MockTracksContract.swift in Sources */,
+				24FC3EB27206D4FC15E151BB /* MockTrackColoring.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
