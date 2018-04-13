@@ -1,9 +1,9 @@
 import Foundation
 
 protocol TrackServicing {
-    func fetch(completion: (_ tracks: [Track]) -> ())
-    func addTrack(title: String, artist: String, completion: () -> Void)
-    func delete(track: Track, completion: () -> Void)
+    func fetch(completion: @escaping (_ tracks: [Track]) -> ())
+    func addTrack(title: String, artist: String, completion: @escaping () -> Void)
+    func delete(track: Track, completion: @escaping () -> Void)
 }
 
 final class TrackService: TrackServicing {
@@ -18,16 +18,16 @@ final class TrackService: TrackServicing {
                           Track(id: 7, title: "Tom Sawyer", artist: "Rush"),
                           Track(id: 8, title: "Thunderstruck", artist: "AC/DC")]
     
-    func fetch(completion: ([Track]) -> ()) {
+    func fetch(completion: @escaping ([Track]) -> ()) {
         completion(tracks)
     }
     
-    func addTrack(title: String, artist: String, completion: () -> Void) {
+    func addTrack(title: String, artist: String, completion: @escaping () -> Void) {
         tracks.append(Track(id: tracks.count + 1, title: title, artist: artist))
         completion()
     }
     
-    func delete(track: Track, completion: () -> Void) {
+    func delete(track: Track, completion: @escaping () -> Void) {
         guard let index = tracks.index(where: { trackIndex -> Bool in
             return track == trackIndex
         }) else { return }

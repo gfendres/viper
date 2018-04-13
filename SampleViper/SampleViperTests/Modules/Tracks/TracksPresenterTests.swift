@@ -53,7 +53,7 @@ class TracksPresenterTests: XCTestCase {
     }
 
     func test_didSwipeToDelete_whenTracksAvailable_shouldDeleteTrack() {
-        let tracks = makeMockTracks()
+        let tracks = MockTrackServicing.makeMockTracks()
         subject.fetched(tracks: tracks)
         subject.didSwipeToDelete(at: 1)
 
@@ -68,7 +68,7 @@ class TracksPresenterTests: XCTestCase {
     }
 
     func test_fetchedTracks_shouldUpdateViewModels() {
-        let tracks = makeMockTracks()
+        let tracks = MockTrackServicing.makeMockTracks()
         subject.fetched(tracks: tracks)
 
         let viewModels = tracks.map { track in
@@ -83,14 +83,5 @@ class TracksPresenterTests: XCTestCase {
             return
         }
         XCTAssertEqual(updateViewModelsSpy, viewModels)
-    }
-
-    // MARK: - Private
-
-    private func makeMockTracks() -> [Track] {
-        return [
-            Track(id: 0, title: "mockTitle", artist: "mockArtist"),
-            Track(id: 1, title: "mockTitle2", artist: "mockArtist2")
-        ]
     }
 }
