@@ -11,6 +11,7 @@
 		24FC30AD42F920C14391B0A4 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC343A4636E07E23AD8F62 /* AlertFactory.swift */; };
 		24FC313E2DA4178006146990 /* XCTest+Asserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC3B6D72189A9F9962C3B6 /* XCTest+Asserts.swift */; };
 		24FC36EBD65BAAFACCE184F4 /* MockTracksContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC3816FA2D93E99570AC07 /* MockTracksContract.swift */; };
+		24FC379EDA2B758F54E3809F /* TrackServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC3BCDE956EEAD5E8A64D1 /* TrackServiceTests.swift */; };
 		24FC392A7D9E959BAE659438 /* TracksPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC3734B4C38DA9F2369359 /* TracksPresenterTests.swift */; };
 		24FC3DA08914BE3189698711 /* TracksInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC3CD2BB24B81DB3419D1E /* TracksInteractorTests.swift */; };
 		24FC3E0AEAC74F9DC87B7F8D /* MockTrackServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC3C943D04E252F7042F53 /* MockTrackServicing.swift */; };
@@ -51,6 +52,7 @@
 		24FC3816FA2D93E99570AC07 /* MockTracksContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTracksContract.swift; sourceTree = "<group>"; };
 		24FC3A68DBBF49741AF95AB0 /* ColorResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorResolver.swift; sourceTree = "<group>"; };
 		24FC3B6D72189A9F9962C3B6 /* XCTest+Asserts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTest+Asserts.swift"; sourceTree = "<group>"; };
+		24FC3BCDE956EEAD5E8A64D1 /* TrackServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackServiceTests.swift; sourceTree = "<group>"; };
 		24FC3C943D04E252F7042F53 /* MockTrackServicing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTrackServicing.swift; sourceTree = "<group>"; };
 		24FC3CD2BB24B81DB3419D1E /* TracksInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksInteractorTests.swift; sourceTree = "<group>"; };
 		D1F88BC12036E11E0040D1D9 /* SampleViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24FC32DD7BE4BE2A0923BCF2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				24FC3BCDE956EEAD5E8A64D1 /* TrackServiceTests.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		24FC35C376DD627C92D0699C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +174,7 @@
 				24FC387AC4C2AB9913B23B1A /* Modules */,
 				24FC3C13C7C08950680DB04C /* Mocks */,
 				24FC35C376DD627C92D0699C /* Extensions */,
+				24FC32DD7BE4BE2A0923BCF2 /* Shared */,
 			);
 			path = SampleViperTests;
 			sourceTree = "<group>";
@@ -397,6 +408,7 @@
 				24FC3DA08914BE3189698711 /* TracksInteractorTests.swift in Sources */,
 				24FC3E0AEAC74F9DC87B7F8D /* MockTrackServicing.swift in Sources */,
 				24FC313E2DA4178006146990 /* XCTest+Asserts.swift in Sources */,
+				24FC379EDA2B758F54E3809F /* TrackServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

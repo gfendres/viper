@@ -9,26 +9,45 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>TracksPresenterTests.xcscheme</key>
+		<key>AllTests.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false />
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>TracksPresenterTests.test_fetchedTracks_shouldUpdateViewModels.xcscheme</key>
+		<key>TracksPresenterTests.test_handleError_shouldShowErrorOnView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>TracksInteractorTests.xcscheme</key>
+		<key>TrackServiceTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>3</integer>
+		</dict>
+		<key>TracksInteractorTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>TracksInteractorTests.test_addTrack_shouldAddTrack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>TracksInteractorTests.test_deleteTrack_shouldDelegateFetchedTracks.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 	</dict>
 </dict>

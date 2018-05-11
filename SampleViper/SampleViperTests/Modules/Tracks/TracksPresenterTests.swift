@@ -67,7 +67,7 @@ class TracksPresenterTests: XCTestCase {
         XCTAssertEqual(mockInteractor.deleteTrackCallCount, 0)
     }
 
-    func test_fetchedTracks_shouldUpdateViewModels() {
+    func test_fetchedTracks_shouldUpdateViewModels() throws {
         let tracks = MockTrackServicing.makeMockTracks()
         subject.fetched(tracks: tracks)
 
@@ -78,10 +78,15 @@ class TracksPresenterTests: XCTestCase {
          }
 
         XCTAssertEqual(mockView.updateViewModelsCallCount, 1)
-        guard let updateViewModelsSpy = mockView.updateViewModelsSpy else {
-            XCTFail()
-            return
-        }
+        let updateViewModelsSpy = try AssertNotNil(mockView.updateViewModelsSpy)
         XCTAssertEqual(updateViewModelsSpy, viewModels)
+    }
+
+    func test_handleError_shouldShowErrorOnView() throws {
+        subject.handleError(.notFound)
+        XCTAssertEqual(mockView.showErrorDescriptionCallCount, 1)
+        let errorDescription = try AssertNotNil(ServiceError.notFound.errorDescription)
+        XCTAssertEqual(mockView.showErrorDescriptionSpy, errorDescription)
+
     }
 }

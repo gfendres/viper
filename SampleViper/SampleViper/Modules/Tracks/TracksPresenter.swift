@@ -53,4 +53,8 @@ extension TracksPresenter: TracksInteractorDelegate {
         self.tracks = tracks
         view?.update(viewModels: tracks.map(toViewModel))
     }
+
+    func handleError(_ error: ServiceError) {
+        view?.showError(error.errorDescription ?? "Generic Error")
+    }
 }

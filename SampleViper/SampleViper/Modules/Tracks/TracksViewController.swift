@@ -62,6 +62,10 @@ extension TracksViewController: TracksViewing {
         trackViewModels = viewModels
         tracksTableView.reloadData()
     }
+
+    func showError(_ description: String) {
+        print(description)
+    }
 }
 
 extension TracksViewController: UITableViewDataSource {

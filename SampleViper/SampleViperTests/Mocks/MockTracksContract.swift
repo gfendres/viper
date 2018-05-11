@@ -54,6 +54,13 @@ open class MockTracksInteractorDelegate: TracksInteractorDelegate {
         fetchedTracksSpy = tracks
     }
 
+    public var handleErrorCallCount = 0
+    public var handleErrorSpy: ServiceError?
+
+    public func handleError(_ error: ServiceError) {
+        handleErrorCallCount += 1
+        handleErrorSpy = error
+    }
 }
 
 open class MockTracksPresenting: TracksPresenting {
@@ -116,4 +123,11 @@ open class MockTracksViewing: TracksViewing {
         updateViewModelsSpy = viewModels
     }
 
+    public var showErrorDescriptionCallCount = 0
+    public var showErrorDescriptionSpy: String?
+
+    public func showError(_ description: String) {
+        showErrorDescriptionCallCount += 1
+        showErrorDescriptionSpy = description
+    }
 }

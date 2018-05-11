@@ -14,16 +14,25 @@ class TracksInteractor: TracksInteracting {
     // MARK: Business logic
 
     func fetchTracks() {
-        service.fetch { [weak self] tracks in
-            self?.delegate?.fetched(tracks: tracks)
-        }
+        service.fetch(completion: handleResult)
     }
     
     func addTrack(title: String, artist: String) {
-        service.addTrack(title: title, artist: artist, completion: fetchTracks)
+        service.addTrack(title: title, artist: artist, completion: handleResult)
     }
     
     func delete(track: Track) {
-        service.delete(track: track, completion: fetchTracks)
+        service.delete(track: track, completion: handleResult)
+    }
+
+    // MARK: - Private
+
+    private func handleResult(_ result: Result<[Track]>) {
+        switch result {
+        case .success(let tracks):
+            delegate?.fetched(tracks: tracks)
+        case .failure(let error):
+            delegate?.handleError(error)
+        }
     }
 }
