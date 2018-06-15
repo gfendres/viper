@@ -98,7 +98,7 @@ Most of the `Presenter` public methods are `View` events, with that said testing
 ```
 
 ```swift
-    func fetched(tracks: [Track]) {
+    func didFetch(tracks: [Track]) {
         self.tracks = tracks
         view?.update(with: tracks.map(toViewModel))
     }
@@ -143,18 +143,20 @@ The exciting part of the `Contract` is that you have all the `Protocols` here, h
 
 ```swift
 protocol TracksPresenting: class {
-    weak var view: TracksViewing? { get set }
+    var view: TracksViewing? { get set }
+
     func viewDidLoad()
     func didTapAdd(title: String, artist: String)
     func didSwipeToDelete(at row: Int)
 }
 
 protocol TracksViewing: class {
-    func update(with viewModels: [TrackViewModel])
+    func update(viewModels: [TrackViewModel])
+    func showError(_ description: String)
 }
 
 protocol TracksInteracting: class {
-    weak var delegate: TracksInteractorDelegate? { get set }
+    var delegate: TracksInteractorDelegate? { get set }
     
     func fetchTracks()
     func addTrack(title: String, artist: String)
@@ -162,11 +164,12 @@ protocol TracksInteracting: class {
 }
 
 protocol TracksInteractorDelegate: class {
-    func fetched(tracks: [Track])
+    func didFetch(tracks: [Track])
+    func handleError(_ error: ServiceError)
 }
 
 protocol TracksRouting: class {
-    weak var viewController: UIViewController? { get set }
+    var viewController: UIViewController? { get set }
 }
 ```
 
@@ -188,5 +191,36 @@ It usually has only one method to assemble the entire `Module`.
         interactor.delegate = presenter
         
         return viewController
+    }
+```
+
+# Testing
+
+One of the best thing about VIPER is Testing. When we get the `Presenter` as example, we can see that it looks like an `UI` test. it is very clear what is should do. 
+
+```swift
+    func test_viewDidLoad_shouldFetchTracks() {
+        subject.viewDidLoad()
+        XCTAssertEqual(mockInteractor.fetchTracksCallCount, 1)
+    }
+    
+    func test_didTapAdd_shouldAddTrack() {
+        let artist = "mockArtist"
+        let title = "mockTitle"
+
+        subject.didTapAdd(title: title, artist: artist)
+
+        XCTAssertEqual(mockInteractor.addTrackTitleArtistCallCount, 1)
+        XCTAssertEqual(mockInteractor.addTrackTitleArtistSpy?.title, title)
+        XCTAssertEqual(mockInteractor.addTrackTitleArtistSpy?.artist, artist)
+    }
+    
+    func test_didSwipeToDelete_whenTracksAvailable_shouldDeleteTrack() {
+        let tracks = MockTrackServicing.makeMockTracks()
+        subject.didFetch(tracks: tracks)
+        subject.didSwipeToDelete(at: 1)
+
+        XCTAssertEqual(mockInteractor.deleteTrackCallCount, 1)
+        XCTAssertEqual(mockInteractor.deleteTrackSpy, tracks[1])
     }
 ```
