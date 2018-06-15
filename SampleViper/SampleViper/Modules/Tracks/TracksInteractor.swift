@@ -30,7 +30,7 @@ class TracksInteractor: TracksInteracting {
     private func handleResult(_ result: Result<[Track]>) {
         switch result {
         case .success(let tracks):
-            delegate?.fetched(tracks: tracks)
+            delegate?.didFetch(tracks: tracks)
         case .failure(let error):
             delegate?.handleError(error)
         }

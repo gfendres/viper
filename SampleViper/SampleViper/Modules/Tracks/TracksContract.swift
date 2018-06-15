@@ -22,7 +22,7 @@ protocol TracksInteracting: class {
 }
 
 protocol TracksInteractorDelegate: class {
-    func fetched(tracks: [Track])
+    func didFetch(tracks: [Track])
     func handleError(_ error: ServiceError)
 }
 

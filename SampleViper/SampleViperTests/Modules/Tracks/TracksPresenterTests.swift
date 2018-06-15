@@ -54,7 +54,7 @@ class TracksPresenterTests: XCTestCase {
 
     func test_didSwipeToDelete_whenTracksAvailable_shouldDeleteTrack() {
         let tracks = MockTrackServicing.makeMockTracks()
-        subject.fetched(tracks: tracks)
+        subject.didFetch(tracks: tracks)
         subject.didSwipeToDelete(at: 1)
 
         XCTAssertEqual(mockInteractor.deleteTrackCallCount, 1)
@@ -69,7 +69,7 @@ class TracksPresenterTests: XCTestCase {
 
     func test_fetchedTracks_shouldUpdateViewModels() throws {
         let tracks = MockTrackServicing.makeMockTracks()
-        subject.fetched(tracks: tracks)
+        subject.didFetch(tracks: tracks)
 
         let viewModels = tracks.map { track in
             return TrackViewModel(

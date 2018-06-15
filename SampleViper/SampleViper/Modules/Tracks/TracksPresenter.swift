@@ -49,7 +49,7 @@ class TracksPresenter: TracksPresenting {
 }
 
 extension TracksPresenter: TracksInteractorDelegate {
-    func fetched(tracks: [Track]) {
+    func didFetch(tracks: [Track]) {
         self.tracks = tracks
         view?.update(viewModels: tracks.map(toViewModel))
     }
