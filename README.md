@@ -130,7 +130,11 @@ You can choose to have a initializer on `ViewModel` that receives a `model` or d
 
 The `Router` is responsible for redirecting to new `Modules` using their `Builders`. Usually, It has a weak reference to the `View Controller` to be able to push to a new `Module`.
 
-[Router Code]
+```swift
+   func openTrackScreen(track: Track) {
+       viewController?.push(trackBuilder.makeModule(track: track), animated: true)
+   }
+```
 
 ## Contract
 
