@@ -43,7 +43,7 @@ VIPER is followed by:
 - Define the communication between the `VIPER` parts (`Interactor`, `Presenter` ...)
 - It is the **FIRST** file to code.
 
-## B: Builder
+## F: ModuleFactory
 
 - Create the Module
 
@@ -128,11 +128,11 @@ You can choose to have a initializer on `ViewModel` that receives a `model` or d
 
 ## Router
 
-The `Router` is responsible for redirecting to new `Modules` using their `Builders`. Usually, It has a weak reference to the `View Controller` to be able to push to a new `Module`.
+The `Router` is responsible for redirecting to new `Modules` using their `Factories`. Usually, It has a weak reference to the `View Controller` to be able to push to a new `Module`.
 
 ```swift
    func openTrackScreen(track: Track) {
-       viewController?.push(trackBuilder.makeModule(track: track), animated: true)
+       viewController?.push(trackModuleFactory.makeModule(track: track), animated: true)
    }
 ```
 
@@ -177,7 +177,7 @@ protocol TracksRouting: class {
 }
 ```
 
-## Builder
+## Module Factory
 
 Creates the `Module` injecting the dependencies and returns the `View`.
 It usually has only one method to assemble the entire `Module`.
