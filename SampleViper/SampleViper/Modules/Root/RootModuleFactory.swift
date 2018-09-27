@@ -1,6 +1,6 @@
 import UIKit
 
-class RootBuilder {
+class RootModuleFactory {
     
     static func makeModule(in window: UIWindow?) {
         

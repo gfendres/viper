@@ -5,7 +5,7 @@ class RootRouter: RootRouting {
     
     func presentListScreen() {
         window?.makeKeyAndVisible()
-        let navigationController = UINavigationController(rootViewController: TracksBuilder.makeModule())
+        let navigationController = UINavigationController(rootViewController: TracksModuleFactory.makeModule())
         navigationController.navigationBar.isTranslucent = true
         window?.rootViewController = navigationController
     }

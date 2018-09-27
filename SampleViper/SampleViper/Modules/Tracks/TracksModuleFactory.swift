@@ -1,6 +1,6 @@
 import UIKit
 
-class TracksBuilder {
+class TracksModuleFactory {
     
     static func makeModule(service: TrackServicing = TrackService()) -> UIViewController {
         

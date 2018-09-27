@@ -19,14 +19,14 @@
 		D1F88BC52036E11E0040D1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BC42036E11E0040D1D9 /* AppDelegate.swift */; };
 		D1F88BCC2036E11E0040D1D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1F88BCB2036E11E0040D1D9 /* Assets.xcassets */; };
 		D1F88BCF2036E11E0040D1D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1F88BCD2036E11E0040D1D9 /* LaunchScreen.storyboard */; };
-		D1F88BEF2036E2610040D1D9 /* TracksBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BE92036E2610040D1D9 /* TracksBuilder.swift */; };
+		D1F88BEF2036E2610040D1D9 /* TracksModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BE92036E2610040D1D9 /* TracksModuleFactory.swift */; };
 		D1F88BF02036E2610040D1D9 /* TracksContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BEA2036E2610040D1D9 /* TracksContract.swift */; };
 		D1F88BF12036E2610040D1D9 /* TracksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BEB2036E2610040D1D9 /* TracksInteractor.swift */; };
 		D1F88BF22036E2610040D1D9 /* TracksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BEC2036E2610040D1D9 /* TracksPresenter.swift */; };
 		D1F88BF32036E2610040D1D9 /* TracksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BED2036E2610040D1D9 /* TracksRouter.swift */; };
 		D1F88BF42036E2610040D1D9 /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BEE2036E2610040D1D9 /* TracksViewController.swift */; };
 		D1F88BF72036E2790040D1D9 /* TracksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1F88BF62036E2790040D1D9 /* TracksViewController.xib */; };
-		D1F88BFF2036E2C00040D1D9 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BF92036E2C00040D1D9 /* RootBuilder.swift */; };
+		D1F88BFF2036E2C00040D1D9 /* RootModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BF92036E2C00040D1D9 /* RootModuleFactory.swift */; };
 		D1F88C002036E2C00040D1D9 /* RootContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BFA2036E2C00040D1D9 /* RootContract.swift */; };
 		D1F88C022036E2C00040D1D9 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BFC2036E2C00040D1D9 /* RootPresenter.swift */; };
 		D1F88C032036E2C00040D1D9 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F88BFD2036E2C00040D1D9 /* RootRouter.swift */; };
@@ -62,14 +62,14 @@
 		D1F88BD02036E11E0040D1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1F88BD52036E11E0040D1D9 /* SampleViperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleViperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F88BDB2036E11E0040D1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D1F88BE92036E2610040D1D9 /* TracksBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksBuilder.swift; sourceTree = "<group>"; };
+		D1F88BE92036E2610040D1D9 /* TracksModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksModuleFactory.swift; sourceTree = "<group>"; };
 		D1F88BEA2036E2610040D1D9 /* TracksContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksContract.swift; sourceTree = "<group>"; };
 		D1F88BEB2036E2610040D1D9 /* TracksInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksInteractor.swift; sourceTree = "<group>"; };
 		D1F88BEC2036E2610040D1D9 /* TracksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksPresenter.swift; sourceTree = "<group>"; };
 		D1F88BED2036E2610040D1D9 /* TracksRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksRouter.swift; sourceTree = "<group>"; };
 		D1F88BEE2036E2610040D1D9 /* TracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
 		D1F88BF62036E2790040D1D9 /* TracksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TracksViewController.xib; sourceTree = "<group>"; };
-		D1F88BF92036E2C00040D1D9 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		D1F88BF92036E2C00040D1D9 /* RootModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModuleFactory.swift; sourceTree = "<group>"; };
 		D1F88BFA2036E2C00040D1D9 /* RootContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContract.swift; sourceTree = "<group>"; };
 		D1F88BFC2036E2C00040D1D9 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		D1F88BFD2036E2C00040D1D9 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 			children = (
 				D1F88C052036EC010040D1D9 /* ViewModels */,
 				D1F88BF52036E26A0040D1D9 /* View */,
-				D1F88BE92036E2610040D1D9 /* TracksBuilder.swift */,
+				D1F88BE92036E2610040D1D9 /* TracksModuleFactory.swift */,
 				D1F88BEA2036E2610040D1D9 /* TracksContract.swift */,
 				D1F88BEB2036E2610040D1D9 /* TracksInteractor.swift */,
 				D1F88BEC2036E2610040D1D9 /* TracksPresenter.swift */,
@@ -243,7 +243,7 @@
 		D1F88BF82036E2AA0040D1D9 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				D1F88BF92036E2C00040D1D9 /* RootBuilder.swift */,
+				D1F88BF92036E2C00040D1D9 /* RootModuleFactory.swift */,
 				D1F88BFA2036E2C00040D1D9 /* RootContract.swift */,
 				D1F88BFC2036E2C00040D1D9 /* RootPresenter.swift */,
 				D1F88BFD2036E2C00040D1D9 /* RootRouter.swift */,
@@ -383,7 +383,7 @@
 				D1F88BF32036E2610040D1D9 /* TracksRouter.swift in Sources */,
 				D1F88BF22036E2610040D1D9 /* TracksPresenter.swift in Sources */,
 				D1F88BC52036E11E0040D1D9 /* AppDelegate.swift in Sources */,
-				D1F88BEF2036E2610040D1D9 /* TracksBuilder.swift in Sources */,
+				D1F88BEF2036E2610040D1D9 /* TracksModuleFactory.swift in Sources */,
 				D1F88C032036E2C00040D1D9 /* RootRouter.swift in Sources */,
 				D1F88C002036E2C00040D1D9 /* RootContract.swift in Sources */,
 				D1F88C022036E2C00040D1D9 /* RootPresenter.swift in Sources */,
@@ -391,7 +391,7 @@
 				D1F88BF02036E2610040D1D9 /* TracksContract.swift in Sources */,
 				D1F88C0A203721230040D1D9 /* Track.swift in Sources */,
 				D1F88BF42036E2610040D1D9 /* TracksViewController.swift in Sources */,
-				D1F88BFF2036E2C00040D1D9 /* RootBuilder.swift in Sources */,
+				D1F88BFF2036E2C00040D1D9 /* RootModuleFactory.swift in Sources */,
 				D1F88C0D203722AA0040D1D9 /* TrackService.swift in Sources */,
 				24FC30AD42F920C14391B0A4 /* AlertFactory.swift in Sources */,
 				24FC30219FD6CABFDA933F25 /* ColorResolver.swift in Sources */,
